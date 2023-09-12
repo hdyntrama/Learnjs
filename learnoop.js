@@ -1,3 +1,4 @@
+//W5 Js OOP
 class Kendaraan{
     constructor(merek,cc){
         this.merek = merek
