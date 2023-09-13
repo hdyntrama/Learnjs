@@ -7,6 +7,7 @@ class Kendaraan {
         this.jenisKendaraan = jenisKendaraan;
         this.kapasitasMesin = kapasitasMesin;
     }
+    //make condition base the case
     checkSubsidi() {
         if (this.jenisKendaraan === "plat kuning" || this.jenisKendaraan === "motor") {
             return "BBM subsidi";
