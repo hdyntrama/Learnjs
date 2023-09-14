@@ -25,6 +25,9 @@
     <!--add button onclick & input-->
     Nama : <input type="text" id="nama">
     <button onclick="getDataInput()">submit</button>
+    <br>
+    <ul id="nama_hero"></ul>
+    <br>
     <button onclick="testFunction()">show data from selector</button>
 
     <p id="pilih_kelas"></p>
@@ -40,6 +43,16 @@
             console.log(nama_input.value)
             data.push(nama_input.value)
             console.log(data)
+            
+            //show list berdasarkan button submit
+            const node = document.createElement("li")
+            const value_li = document.createTextNode(nama_input.value)
+            node.appendChild(value_li)
+            document.getElementById("nama_hero").appendChild(node)
+
+            //clear input box after submit
+            document.getElementById("nama").value = "";
+
         }
         //function show data by button show data
         function testFunction(){
