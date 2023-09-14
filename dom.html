@@ -14,6 +14,7 @@
         <li>Mobile Developer</li>
         <li>Dev Ops</li>
     </ul>
+
     <p>List Bootcamp in Rakamin Academy MSIB</p>
     <ul>
         <li>MSIB QA Engineer</li>
@@ -21,17 +22,40 @@
         <li>MSIB Mobile Developer</li>
         <li>MSIB Dev Ops</li>
     </ul>
+    <!--add button onclick & input-->
+    Nama : <input type="text" id="nama">
+    <button onclick="getDataInput()">submit</button>
+    <button onclick="testFunction()">show data from selector</button>
 
     <p id="pilih_kelas"></p>
     <p class="kelas"></p>
     <p class="kelas"></p>
     <script>
-        const list_pelatihan = document.getElementsByTagName("li")
-        document.getElementById("pilih_kelas").innerHTML = list_pelatihan[7].innerHTML
-        list_pelatihan[6].innerHTML = "MSIB IOS Mobile Developer"
-        const kelas_pelatihan = document.getElementsByClassName("kelas")
-        kelas_pelatihan[0].innerHTML="Rakamin MSIB"
-        kelas_pelatihan[1].innerHTML="Rakamin Jaya"
+        //dom manipulation
+        //create function
+        //function untuk add data by button submit
+        let data =[]
+        function getDataInput(){
+            const nama_input = document.getElementById("nama")
+            console.log(nama_input.value)
+            data.push(nama_input.value)
+            console.log(data)
+        }
+        //function show data by button show data
+        function testFunction(){
+            const list_pelatihan = document.getElementsByTagName("li")
+            document.getElementById("pilih_kelas").innerHTML = list_pelatihan[5].innerHTML
+            list_pelatihan[6].innerHTML = "MSIB IOS Mobile Developer"
+            //add looping
+            for(let index = 0; index < list_pelatihan.length; index++){
+            console.log(list_pelatihan[index])
+
+
+             }
+            const kelas_pelatihan = document.getElementsByClassName("kelas")
+            kelas_pelatihan[0].innerHTML="Rakamin MSIB"
+            kelas_pelatihan[1].innerHTML="Rakamin Jaya"
+        }
     </script>
 </body>
 </html>
