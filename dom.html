@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Rakamin Learning Bootcamp</h1>
+    <p>List Bootcamp in Rakamin Academy</p>
+    <ul>
+        <li>QA Engineer</li>
+        <li>Fullstack Web Developer</li>
+        <li>Mobile Developer</li>
+        <li>Dev Ops</li>
+    </ul>
+    <p>List Bootcamp in Rakamin Academy MSIB</p>
+    <ul>
+        <li>MSIB QA Engineer</li>
+        <li>MSIB Fullstack Web Developer</li>
+        <li>MSIB Mobile Developer</li>
+        <li>MSIB Dev Ops</li>
+    </ul>
+
+    <p id="pilih_kelas"></p>
+    <p class="kelas"></p>
+    <p class="kelas"></p>
+    <script>
+        const list_pelatihan = document.getElementsByTagName("li")
+        document.getElementById("pilih_kelas").innerHTML = list_pelatihan[7].innerHTML
+        list_pelatihan[6].innerHTML = "MSIB IOS Mobile Developer"
+        const kelas_pelatihan = document.getElementsByClassName("kelas")
+        kelas_pelatihan[0].innerHTML="Rakamin MSIB"
+        kelas_pelatihan[1].innerHTML="Rakamin Jaya"
+    </script>
+</body>
+</html>
